@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChopSign 验证码</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+    
+    body {
+      font-family: 'Noto Sans Sc', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #f5f7fa;
+    }
+    
+    .container {
+      border-radius: 12px;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    
+    .code-container {
+      background: linear-gradient(145deg, #f0f4ff, #e6f0ff);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+    }
+    
+    .verification-code {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      color: #3867d6;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+      color: #4a5568;
+      font-size: 16px;
+      margin: 16px 0;
+    }
+    
+    .highlight {
+      font-weight: 500;
+      color: #3867d6;
+    }
+    
+    .footer {
+      font-size: 13px;
+      color: #a0aec0;
+      text-align: center;
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid #edf2f7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>您好：</p>
+    <p>您正在请求登录您的<span class="highlight">筷签账号</span>，您的登录验证码为：</p>
+    <div class="code-container">
+      <div class="verification-code">{{ code }}</div>
+    </div>
+    <p>验证码有效期为 <span class="highlight">{{ expiresIn }} 分钟</span>。</p>
+    <p>请勿将验证码泄露给他人，以确保账号安全</p>
+    <div class="footer">
+      <p>感谢您使用筷签账号。</p>
+      <p>© {{ year }} ChopSign · 版权所有</p>
+    </div>
+  </div>
+</body>
+</html>
