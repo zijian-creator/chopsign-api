@@ -2,13 +2,13 @@ export interface VerificationCodeMailOptions {
   /**
    * 接收者邮箱
    */
-  email: string
+  email: string;
   /**
    * 验证码
    */
-  code: string
+  code: string;
   /**
    * 验证码有效期（分钟）
    */
-  expiresIn?: number
+  expiresIn?: number;
 }
